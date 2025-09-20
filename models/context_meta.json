@@ -1,0 +1,122 @@
+{
+  "known_sites": [
+    "Ikorodu",
+    "Ogun",
+    "Osun",
+    "Unilag"
+  ],
+  "dry_threshold_default": 20.0,
+  "feature_columns": [
+    "temperature_c",
+    "humidity_pct",
+    "light_norm",
+    "hour",
+    "dayofweek",
+    "month",
+    "soil_moisture_lag1",
+    "soil_moisture_lag2",
+    "soil_moisture_lag3",
+    "soil_moisture_lag6",
+    "soil_moisture_roll6",
+    "vpd_kpa",
+    "dew_point_c",
+    "heat_flag",
+    "frost_flag",
+    "disease_risk",
+    "site_id_Ikorodu",
+    "site_id_Ogun",
+    "site_id_Osun",
+    "site_id_Unilag"
+  ],
+  "health_metrics": {
+    "vpd_kpa": "Vapor Pressure Deficit (kPa) - plant water stress indicator",
+    "dew_point_c": "Dew point temperature (\u00b0C) - condensation risk",
+    "heat_flag": "Heat stress flag (temperature \u2265 35\u00b0C)",
+    "frost_flag": "Frost risk flag (temperature \u2264 2\u00b0C)",
+    "waterlog_flag": "Waterlogging risk (soil moisture \u2265 85%)",
+    "dryspell_flag": "Drought stress flag (soil moisture \u2264 25%)",
+    "disease_risk": "Disease risk score (0-100) based on humidity, temperature, and VPD",
+    "sensor_issue_flag": "Sensor malfunction indicator (stuck readings detection)"
+  },
+  "model_info": {
+    "best_model": "GradientBoosting",
+    "models_trained": [
+      "DecisionTree",
+      "RandomForest",
+      "GradientBoosting",
+      "XGBoost"
+    ],
+    "training_samples": 2484,
+    "test_samples": 621,
+    "best_r2": 0.9978654121605465,
+    "best_rmse": 0.7169091669606172,
+    "best_mae": 0.495517994014166,
+    "feature_count": 20,
+    "health_feature_count": 5
+  },
+  "data_info": {
+    "total_records": 3129,
+    "processed_records": 3105,
+    "data_quality": "99.2% usable after cleaning",
+    "date_range": {
+      "start": "2025-05-25 09:54:15+00:00",
+      "end": "2025-09-06 13:16:22+00:00"
+    },
+    "sites_count": 4,
+    "sites_list": [
+      "Ikorodu",
+      "Ogun",
+      "Osun",
+      "Unilag"
+    ]
+  },
+  "config_params": {
+    "test_fraction": 0.2,
+    "random_state": 42,
+    "lag_windows": [
+      1,
+      2,
+      3,
+      6
+    ],
+    "rolling_window": 6,
+    "vpd_disease_threshold": 0.6,
+    "heat_stress_temp": 35,
+    "frost_risk_temp": 2,
+    "waterlog_threshold": 85,
+    "dryspell_threshold": 25
+  },
+  "health_export": {
+    "filename": "siams_health_metrics.csv",
+    "columns": [
+      "timestamp",
+      "site_id",
+      "vpd_kpa",
+      "dew_point_c",
+      "heat_flag",
+      "frost_flag",
+      "waterlog_flag",
+      "dryspell_flag",
+      "disease_risk",
+      "sensor_issue_flag"
+    ],
+    "total_records": 3129
+  },
+  "additional_models": {
+    "dryness_classifier": {
+      "available": true,
+      "threshold": 20.0,
+      "model_type": "GradientBoosting"
+    },
+    "t1_forecaster": {
+      "available": true,
+      "model_type": "GradientBoosting"
+    }
+  },
+  "pipeline_info": {
+    "generated_at": "2025-09-17T12:48:40.523635",
+    "pipeline_version": "SIAMS_ML_v2.0_with_health_metrics",
+    "timezone": "Africa/Lagos",
+    "data_source": "SIAMS DataLog.xlsx"
+  }
+}

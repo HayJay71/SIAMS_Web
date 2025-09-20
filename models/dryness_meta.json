@@ -1,0 +1,25 @@
+{
+  "threshold": 20.0,
+  "features": [
+    "temperature_c",
+    "humidity_pct",
+    "light_norm",
+    "hour",
+    "dayofweek",
+    "month",
+    "soil_moisture_lag1",
+    "soil_moisture_lag2",
+    "soil_moisture_lag3",
+    "soil_moisture_lag6",
+    "soil_moisture_roll6",
+    "vpd_kpa",
+    "dew_point_c",
+    "heat_flag",
+    "frost_flag",
+    "disease_risk",
+    "site_id_Ikorodu",
+    "site_id_Ogun",
+    "site_id_Osun",
+    "site_id_Unilag"
+  ]
+}
