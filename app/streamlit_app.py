@@ -5,12 +5,20 @@ from __future__ import annotations
 # --- at top of streamlit_app.py ---
 import os
 import gspread
+import base64
 from google.oauth2.service_account import Credentials
 import streamlit as st
 from dotenv import load_dotenv
 from pathlib import Path
 
-load_dotenv(Path(__file__).resolve().parent / '.env')  # <-- move here, near the top
+b64_json = os.getenv("GOOGLE_SA_JSON_B64", "").strip()
+if b64_json:
+    sa_path = Path("/tmp/google_sa.json")
+    sa_path.write_bytes(base64.b64decode(b64_json))
+    os.environ["GOOGLE_SA_JSON"] = str(sa_path)
+
+
+load_dotenv(Path(__file__).resolve().parent / '.env')
 
 # Support SHEET_ID from Streamlit Secrets (for compatibility)
 try:
