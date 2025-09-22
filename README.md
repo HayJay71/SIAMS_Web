@@ -59,12 +59,12 @@ SIAMS is an enterprise-grade agricultural monitoring platform that:
 - **Alerts** farmers to critical conditions requiring immediate attention
 
 ### Key Metrics *(Update with your actual model performance)*
-- 🎯 **[98.71]%+ accuracy** in soil moisture prediction *(e.g., 92.5% from your XGBoost model)*
-- ⚡ **[⁓5s]** response time for real-time alerts *(e.g., ~200ms)*
-- 📊 **[8]+ agricultural metrics** monitored continuously *(count from your feature list)*
-- 🌐 **[4] sites** supported for scalable farm operations *(Ikorodu, Ogun, Osun, Unilag)*
-- 📈 **[0.997865412]** R² score for regression model *(from your model evaluation)*
-- 🎯 **[0.972789]** F1-score for dryness classification *(from your binary classifier)*
+- 🎯 **98.71%+ accuracy** in soil moisture prediction *(e.g., 92.5% from your XGBoost model)*
+- ⚡ **⁓5s** response time for real-time alerts *(e.g., ~200ms)*
+- 📊 **8+ agricultural metrics** monitored continuously *(count from your feature list)*
+- 🌐 **4 sites** supported for scalable farm operations *(Ikorodu, Ogun, Osun, Unilag)*
+- 📈 **0.997865412** R² score for regression model *(from your model evaluation)*
+- 🎯 **0.972789** F1-score for dryness classification *(from your binary classifier)*
 
 ## ✨ Features
 
@@ -202,7 +202,7 @@ KNOWN_SITES=Ikorodu,Ogun,Osun,Unilag
 DRY_THRESHOLD=20
 CACHE_TTL_SECONDS=60
 
-# AI Integration (Optional)
+# AI Integration
 LLM_PROVIDER=gemini  # Options: openai, gemini, hf, none
 GEMINI_API_KEY=your_gemini_key
 
@@ -324,9 +324,9 @@ The SIAMS ML pipeline consists of three main components:
    - **Algorithm**: Gradient Boosting Regressor
    - **Features**: 25+ engineered features including temporal, lag, and environmental variables
    - **Performance**: 
-     - **MAE**: [0.495517994] *(Get from SIAMS_ML_Pipeline.ipynb evaluation section)*
-     - **R² Score**: [0.997865412] *(From model evaluation results)*
-     - **RMSE**: [0.716909167] *(Root Mean Square Error from your model)*
+     - **MAE**: 0.495517994 *(Get from SIAMS_ML_Pipeline.ipynb evaluation section)*
+     - **R² Score**: 0.997865412 *(From model evaluation results)*
+     - **RMSE**: 0.716909167 *(Root Mean Square Error from your model)*
    - **Update Frequency**: Weekly retraining with new data
 
 2. **🚨 Dryness Classification Model**
@@ -334,16 +334,16 @@ The SIAMS ML pipeline consists of three main components:
    - **Purpose**: Binary classification for irrigation necessity
    - **Threshold**: Configurable (default: 20% soil moisture)
    - **Performance**: 
-     - **Accuracy**: [98.71]% *(From classification report)*
-     - **F1-Score**: [0.972789] *(From sklearn classification_report)*
+     - **Accuracy**: 98.71% *(From classification report)*
+     - **F1-Score**: 0.972789 *(From sklearn classification_report)*
 
 3. **🔮 Forecasting Model (t+1 Prediction)**
    - **Algorithm**: Gradient Boosting for time series
    - **Horizon**: t+1 predictions (next measurement period)
    - **Features**: Enhanced with lag features and rolling statistics
    - **Performance**:
-     - **MAE**: [0.577] *(From t+1 model evaluation)*
-     - **Accuracy**: [99.7]% *(Forecasting accuracy)*
+     - **MAE**: 0.577 *(From t+1 model evaluation)*
+     - **Accuracy**: 99.7% *(Forecasting accuracy)*
 
 > **📊 How to Get Your Metrics**: Run your `SIAMS_ML_Pipeline.ipynb` notebook completely and extract the evaluation metrics from:
 > - Model evaluation cells (search for `mean_absolute_error`, `r2_score`, `classification_report`)
