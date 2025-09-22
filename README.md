@@ -3,7 +3,7 @@
 [![Azure App Service](https://img.shields.io/badge/Azure-App%20Service-0078d4?logo=microsoft-azure)](https://azure.microsoft.com/services/app-service/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
 [![Python](https://img.shields.io/badge/Python-3.11+-3776ab?logo=python&logoColor=white)](https://python.org/)
-[![Machine Learning](https://img.shields.io/badge/ML-XGBoost%20%7C%20Scikit--learn-orange)](https://github.com/)
+[![Machine Learning](https://img.shields.io/badge/ML-Gradient%20Boosting%20%7C%20Scikit--learn-orange)](https://github.com/)
 
 A comprehensive **Smart Integrated Agricultural Monitoring System** that leverages machine learning, real-time sensor data, and AI-powered insights to optimize agricultural operations across multiple farm sites.
 
@@ -70,7 +70,7 @@ SIAMS is an enterprise-grade agricultural monitoring platform that:
 
 ### 🤖 **Intelligent Monitoring**
 - **Real-time Data Processing**: Live sensor data from Google Sheets integration
-- **ML-Powered Predictions**: XGBoost and ensemble models for soil moisture forecasting
+- **ML-Powered Predictions**: Gradient Boosting and ensemble models for soil moisture forecasting
 - **Multi-site Management**: Centralized monitoring across multiple farm locations
 - **Time-series Forecasting**: Predictive analytics for proactive decision-making
 
@@ -114,7 +114,7 @@ graph TB
     subgraph "ML Pipeline"
         D
         E
-        L[XGBoost Model]
+        L[Gradient Boosting Model]
         M[Dryness Classifier]
         N[Forecasting Model]
     end
@@ -321,7 +321,7 @@ CMD ["streamlit", "run", "app/streamlit_app.py", "--server.port=8000", "--server
 The SIAMS ML pipeline consists of three main components:
 
 1. **🎯 Soil Moisture Regression Model**
-   - **Algorithm**: XGBoost Regressor
+   - **Algorithm**: Gradient Boosting Regressor
    - **Features**: 25+ engineered features including temporal, lag, and environmental variables
    - **Performance**: 
      - **MAE**: [0.495517994] *(Get from SIAMS_ML_Pipeline.ipynb evaluation section)*
@@ -330,7 +330,7 @@ The SIAMS ML pipeline consists of three main components:
    - **Update Frequency**: Weekly retraining with new data
 
 2. **🚨 Dryness Classification Model**
-   - **Algorithm**: Random Forest Classifier
+   - **Algorithm**: Gradient Boosting/Random Forest Classifier
    - **Purpose**: Binary classification for irrigation necessity
    - **Threshold**: Configurable (default: 20% soil moisture)
    - **Performance**: 
@@ -432,7 +432,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Azure App Service** for reliable cloud hosting
 - **Streamlit** for the intuitive web framework
-- **XGBoost** for high-performance machine learning
+- **Gradient Boosting** for high-performance machine learning
 - **Google Sheets API** for seamless data integration
 - **Google Gemini** for AI-powered insights
 
