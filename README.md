@@ -59,7 +59,7 @@ SIAMS is an enterprise-grade agricultural monitoring platform that:
 - **Alerts** farmers to critical conditions requiring immediate attention
 
 ### Key Metrics *(Update with your actual model performance)*
-- 🎯 **98.71%+ accuracy** in soil moisture prediction *(e.g., 92.5% from your XGBoost model)*
+- 🎯 **98%+ accuracy** in soil moisture prediction *(e.g., 92.5% from your XGBoost model)*
 - ⚡ **⁓5s** response time for real-time alerts *(e.g., ~200ms)*
 - 📊 **8+ agricultural metrics** monitored continuously *(count from your feature list)*
 - 🌐 **4 sites** supported for scalable farm operations *(Ikorodu, Ogun, Osun, Unilag)*
