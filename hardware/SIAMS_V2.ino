@@ -34,10 +34,10 @@
 #define WIFI_PASSWORD "unilag123"   // INSERT THE PASSWORD OF THE  WIFI YOU ARE USING
 
 // Google Project ID
-#define PROJECT_ID "snappy-nomad-457814-t6"
+#define PROJECT_ID "YOUR_PROJECT_ID"  // INSERT YOUR PROJECT ID
 
 // Service Account's client email
-#define CLIENT_EMAIL "google-sheets-datalogging@snappy-nomad-457814-t6.iam.gserviceaccount.com"
+#define CLIENT_EMAIL "YOUR_SERVICE_ACCOUNT_EMAIL"  // INSERT YOUR SERVICE ACCOUNT EMAIL
 
 #define sensorPower 7
 #define sensorPin A0
@@ -48,10 +48,10 @@ int lcdColumns = 16;
 int lcdRows = 2;
 
 // Service Account's private key
-const char PRIVATE_KEY[] PROGMEM = "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC/5qE36dQkn1FJ\nZNNnBCoixLkZtJ/za650xY8RkH5Ud0IJIRKCVBwkaM2W7fe3otv2XwBV7Ynk98RD\n25tZ7AyHVAeNyH6djxIyZ6onhRW1yEKZXxfzDVmY4MID2CYn0lqrchM7o7F/jO5t\n6Xj2adwF9rPZ2FxX2JdgcNPW4NurnSHOnoqkKSzi5C/IY6oe+/AUt0s005YtPbUj\nUpatr6/gx/8+/Q471z/SZVYGwXUBwSk8g12l/sYGaJlwKQNRuu38vUs9AbZr6dpN\nAKpYn9UTx1TH7OsIkoM+HJ0U6wJauDr4+oZAXiIH78Sl/UVjC+7GaYpiXgJo9ayS\niMl64K9BAgMBAAECggEAAijav8zeExgPBZh0qbc4AEx6hOrRvZ8Es24nW642oj2l\n9tFmPnTK7OjYJrSUj/61aw+3Urg7x/Gm/gChRkciDlYyeDC5Vk2GSd59WXDRsWIs\nt/I0TEMmSuJtY4a/ye0f0afs1gwT5OKbmq1828jN4dwsiqko86EBldt6MlP1K+iR\noIBeeZw3kawB9dkUc3Z3htt2T6nFmsKR26DkblkGbVxI3agrBMRbBfHA+mDUKify\nCmDY6elXQkndCXiBsRsDO3ab7XtrhueQNwwYzGYc/9Ey5nPiZZ2BgDY1KMZircFO\nUmRZXSOCZG3OB6hUOQzdbVHrImjPcwtc5hkzoOJdAQKBgQDu+l3DVm9dqICPBvCh\nIcMCVoQ9OMmY8qlNiBF0XtJXiHUueJA5uTW8PAnXtRotTOGy/A65K5H6Gu3/hVPn\nzBLBdIH5FGCX4p8lAH6LksWnTnQspPK38BTqIMJ+zPm09MjMiJ1boWpyWQ2avNfr\nKF8Z0SDor/+GR4VErnH/zeppwQKBgQDNkdaYNpDdbAUl6McHMghIlSAtNoIPLizi\nJvEmN2gtklXtDUQVBKo+I2yPnhKQT45mLvc/WT4QEevtGG3PMjzViWduHMAjd61w\ngFimxiSq/bFoJXtaTsUrcOj2umJz3fk123vZwsIreAQYuHAIPDpygv0AIBhEXMWx\nnBhbl5ilgQKBgDb/4hJx0yGgBS5lr322EnZ4SOj6J9OOjY5tcW7x38ELg8SVNMRE\nLuzKeI1vfb3NQuh5gD33nBoOlpXHLp9bZTmmwb78hJqQKoZOjdE7j0fJE42uzLmu\nhHG55mlebV3LNGd2TZjoFmKIwkvJiHvzh6eebM+AqfNShIZhC5WO45NBAoGAHXW4\n+zdWq2S/mB8z5qQU69HzOoeFPAeyBvbtuDxYga9nAQHVr+1rOFx7Qlm071l3Xs18\nQWfYrRTkaqYFlpvse+2lFPKp1mtgP68lBUGAH8Ebm4FDnD2NpBwaRsGPOmulO0Kp\nDRwMF46rh59m7scy2RZMi6gN0j45Vqq4Eug2yAECgYBmM0GHVoK/kocA0XgqkB2q\nN4/B0xyIfZC57XtBx7lnxHlMz+g1lP+V9kU/LbDLHZmJuNT8pKE0BeqdJeC5GLP4\nNNwSOcBqFCr+y1jNIfuLAVTbV8Fx1LFygy4dbUo/MjqxoXI+VJa8l+1eYjX6DnfJ\ndSI5nMCa0sMr/lYz0to3BQ==\n-----END PRIVATE KEY-----\n";
+const char PRIVATE_KEY[] PROGMEM = "-----BEGIN PRIVATE KEY-----[]-----END PRIVATE KEY-----\n";
 
 // The ID of the spreadsheet where you'll publish the data
-const char spreadsheetId[] = "1v8bpluiKsy_AOiEkcMyocyZDOD0SBiLKzeVr_R6Dlg8";
+const char spreadsheetId[] = "YOUR_SPREADSHEET_ID";  // INSERT YOUR SPREADSHEET ID
 
 // Timer variables
 unsigned long lastTime = 0;  
